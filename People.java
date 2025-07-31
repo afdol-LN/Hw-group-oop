@@ -14,6 +14,10 @@ public class People{
     //private int age;
     protected int age;
 
+    private double weight;
+    private double height;   
+    
+
     // protected double weight;
     // protected double height;   
     // protected double BMI;
