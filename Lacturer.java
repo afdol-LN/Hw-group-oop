@@ -20,7 +20,6 @@ public class Lacturer extends People{
         this.LacturerID = LacturerID;
         super.calAge();//ใช้method ของตัวแม่
     }
-
     public void setLacturerID(String LacturerID){
         this.LacturerID = LacturerID;
     }
