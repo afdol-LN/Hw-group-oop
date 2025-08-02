@@ -29,8 +29,6 @@ public class Lacturer extends People{
         return this.LacturerID;
     }
 
-
-
     public void printInfo() {
         System.out.println("--- Lacturer Info ---");
         System.out.println("Fullname: " + getFullname());
