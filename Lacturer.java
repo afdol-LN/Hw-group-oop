@@ -1,34 +1,30 @@
 public class Lacturer extends People{
 
 
-    private String LacturerID;
+    private int LacturerID;
 
-    Lacturer(){
+    public Lacturer(){
         System.out.println("Lacturer()");
     }
 
-<<<<<<< HEAD
-    Lacturer(String fullname, int LacturerID){
-        super.setFullname(fullname);
+    public Lacturer(String fullname, int LacturerID){
         this.LacturerID = LacturerID;
+        super.setFullname(fullname);
+        
     }
 
-    Lacturer(String fullname, int LacturerID ,int yearBorn ,String geder){
+    public Lacturer(String fullname, int LacturerID ,int yearBorn ,String geder){
         super.setFullname(fullname);//(คำสั่ง super) เรียกใช้method ของตัวแม่
         super.setGender(gender);//ใช้method ของตัวแม่
         super.setYearBorn(yearBorn);//ใช้method ของตัวแม่
-=======
-    Lacturer(String fullname, String LacturerID){
-        this.fullname = fullname;
->>>>>>> d35280dde0a4f10be7b8889ea411b0f44efa2975
         this.LacturerID = LacturerID;
     }
 
-    public void setLacturerID(String LacturerID){
+    public void setLacturerID(int LacturerID){
         this.LacturerID = LacturerID;
     }
 
-    public String getLacturerID(){
+    public int getLacturerID(){
         return this.LacturerID;
     }
 
