@@ -37,9 +37,5 @@ public class Lacturer extends People{
     }
 
 
-<<<<<<< HEAD
 
 }
-=======
-}
->>>>>>> a423a5371babb8f5cc5bd8e0a9944572939b17c8

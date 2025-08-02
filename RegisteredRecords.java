@@ -11,7 +11,7 @@ public class RegisteredRecords {
     }
     public RegisteredRecords(Subject newsubject){
         this.subject = newsubject;
-        this.subjectID = 
+        this.subjectID = subject.getSubjectID();
         System.out.println("subject is update");
     }
      public RegisteredRecords(Student newstudent){

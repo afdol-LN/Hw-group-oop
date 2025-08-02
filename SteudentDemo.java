@@ -8,7 +8,7 @@ public class SteudentDemo extends People{
         Lacturer lacturer = new Lacturer();
         lacturer.setLacturerID(1);
         lacturer.setFullname("afdol");
-        System.out.println(lacturer.getFullname());
+        System.out.println(lacturer);
 
         Subject subject = new Subject();
 

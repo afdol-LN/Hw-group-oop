@@ -27,5 +27,7 @@ public class Subject {
 
     }
 
-    public String 
+    public String getSubjectID(){
+        return  this.subjectID;
+    }
 }
