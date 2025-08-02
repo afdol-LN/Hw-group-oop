@@ -100,6 +100,9 @@ public class People{
     public void setYearBorn(int yearBorn){
         this.yearBorn = yearBorn;
     }
+    public int getYearBorn(){
+        return this.yearBorn;
+    }
     public void setIdentificationID(String identifcationID){
         this.identifcationID = identifcationID;
     }

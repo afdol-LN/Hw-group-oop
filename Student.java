@@ -42,6 +42,10 @@ public class Student extends People{
 
     }
 
+    public void setScore(double score){
+        
+    }
+
     public void printRegisteredRecords(){
         System.out.println("--- Registered Records ---");
         if (registeredRecords.isEmpty()) {

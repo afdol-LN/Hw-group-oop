@@ -20,7 +20,12 @@ public class RegisteredRecords {
         System.out.println("student is update");
     }
 
-    
+    public String getSubjectID(){
+        return  this.subjectID;
+    }
+    public String getStudentID(){
+        return this.studentID;
+    }
 
     //defualt contructer
     

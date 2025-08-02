@@ -1,41 +1,43 @@
 public class Lacturer extends People{
 
 
-    private int LacturerID;
+    private String LacturerID;
 
     public Lacturer(){
         System.out.println("Lacturer()");
     }
 
-    public Lacturer(String fullname, int LacturerID){
+    public Lacturer(String fullname, String LacturerID){
         this.LacturerID = LacturerID;
         super.setFullname(fullname);
         
     }
 
-    public Lacturer(String fullname, int LacturerID ,int yearBorn ,String geder){
+    public Lacturer(String fullname, String LacturerID ,int yearBorn ,String geder, int Age){
         super.setFullname(fullname);//(คำสั่ง super) เรียกใช้method ของตัวแม่
         super.setGender(gender);//ใช้method ของตัวแม่
         super.setYearBorn(yearBorn);//ใช้method ของตัวแม่
         this.LacturerID = LacturerID;
+        super.calAge();//ใช้method ของตัวแม่
     }
 
-    public void setLacturerID(int LacturerID){
+    public void setLacturerID(String LacturerID){
         this.LacturerID = LacturerID;
     }
 
-    public int getLacturerID(){
+    public String getLacturerID(){
         return this.LacturerID;
     }
 
-    public void setFullname(String fullname){
-        super.setFullname(fullname);//ใช้method ของตัวแม่
+
+
+    public void printInfo() {
+        System.out.println("--- Lacturer Info ---");
+        System.out.println("Fullname: " + getFullname());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Year born: " + getYearBorn());
+        System.out.println("Age: " + getAge());
+        System.out.println("Lacturer ID: " + LacturerID);
+        System.out.println("----------------------");
     }
-
-    public String getFullname(){
-        return super.getFullname();//ใช้method ของตัวแม่
-    }
-
-
-
 }
