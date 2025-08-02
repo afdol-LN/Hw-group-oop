@@ -29,16 +29,17 @@ public class Student extends People{
       numberOfStudent = numberOfStudent + 1;
     }
 
-    public Student(String gender, String nickname){
-      System.out.println("Student(String gender, String nickname)");  
-      this.gender = gender;
-      this.nickname = nickname;
+    public Student(String gender, String fullname){
+      System.out.println("Student(String gender, String fullname)");  
+      super.setFullname(fullname);
+      super.setGender(gender);
       numberOfStudent = numberOfStudent + 1;
     }
 
     
 
     //setter/methods
+<<<<<<< HEAD
     @Override
     public void setFullname(String fullname){
         super.setFullname(fullname);
@@ -47,15 +48,51 @@ public class Student extends People{
     public String getFullname(){
         return super.getFullname();
     }
+=======
+    
+>>>>>>> c90df5ab8793b85b3fe88dbffbe6a6dc014e5b25
     public void setStudentID(String studentID){
         this.studentID = studentID;
-    };
+    }
+
+<<<<<<< HEAD
+
+    public void register(Subject s){
+=======
     public String getStudentID(){
-        return studentID;
+        return this.studentID;
+    }
+
+    public void setFacuty(String faculty){
+        this.faculty = faculty;
+    }
+    
+    public String getFaculty(){
+        return this.faculty;
+    }
+
+    public void setMajor(String major){
+        this.major = major;
+    }
+
+    public String getMajor(){
+        return this.major;
+    }
+
+    public void printInfo(){
+        System.out.println("--- Student Info ---");
+        System.out.println("Fullname: " + getFullname());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Faculty: " + getFaculty());
+        System.out.println("Major: " + getMajor());
+        System.out.println("Student ID: " + getStudentID());
+        System.out.println("----------------------");
     }
 
 
-    public void register(Subject s){
+    public void register(Subject s , Student std){
+        RegisteredRecords newStdID = new RegisteredRecords(std);
+>>>>>>> c90df5ab8793b85b3fe88dbffbe6a6dc014e5b25
         RegisteredRecords newsubj = new RegisteredRecords(s);
         this.registeredRecords.add(newsubj);
         this.registeredRecords.add(newStdID);
