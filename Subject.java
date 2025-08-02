@@ -1,7 +1,7 @@
 
 public class Subject {
     private String subjectname;
-    private int subjectID;
+    private String subjectID;
     private int credit;
     private Lacturer lecturer;
     private int section;
@@ -10,14 +10,14 @@ public class Subject {
 
     public Subject(){
         this.subjectname="unknow";
-        this.subjectID = 000000;
+        this.subjectID = "unknow";
         this.credit = 0;
         this.section = 1;
         this.semester = 0;
         this.year = 2025;
     }
 
-    public Subject(String subname,int subID,int credit,int section,int semester,int year){
+    public Subject(String subname,String subID,int credit,int section,int semester,int year){
         this.subjectname=subname;
         this.subjectID = subID;
         this.credit = credit;

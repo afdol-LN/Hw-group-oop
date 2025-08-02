@@ -1,9 +1,13 @@
 public class RegisteredRecords {
     private Subject subject;
     private Student student;
+    private String  studentID;
+    private String subjectID;
 
     public RegisteredRecords() {
-
+        System.out.println("record begin");
+        this.studentID = "unknow";
+        this.subjectID = "unknow";
     }
     public RegisteredRecords(Subject newsubject){
         this.subject = newsubject;
@@ -11,8 +15,11 @@ public class RegisteredRecords {
     }
      public RegisteredRecords(Student newstudent){
         this.student = newstudent;
+        this.studentID = student.getStudentID();
         System.out.println("student is update");
     }
+
+    
 
     //defualt contructer
     
