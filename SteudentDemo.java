@@ -7,9 +7,9 @@ public class SteudentDemo extends People{
         Student student = new Student();
         student.setFullname("aonglee");
         student.setGender("Male");
-        student.setStudentID("1");
         student.setFacuty("Science");
         student.setMajor("ICT");
+        student.setStudentID("1");
 
         student.printInfo();
 
