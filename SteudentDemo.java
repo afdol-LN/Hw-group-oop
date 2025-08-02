@@ -3,10 +3,13 @@ public class SteudentDemo extends People{
     //hello
     public static void main(String[] args){
 
-        People s1 = new People("Male", "afdol");
+        Student student = new Student();
+        
+        Lacturer lacturer = new Lacturer();
+        lacturer.setFullname("afdol");
 
-        System.out.println("Gender: " + s1.getGender());
-        System.out.println("Nickname: " + s1.getNickname());
+        Subject subject = new Subject();
+
         
     }
 }

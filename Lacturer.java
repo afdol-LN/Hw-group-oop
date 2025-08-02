@@ -20,6 +20,10 @@ public class Lacturer extends People{
         return this.LacturerID;
     }
 
+    public void setFullname(String fullname){
+        this.fullname = fullname;
+    }
+
     public String getFullname(){
         return this.fullname;
     }
