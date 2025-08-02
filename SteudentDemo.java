@@ -7,6 +7,6 @@ public class SteudentDemo extends People{
 
         System.out.println("Gender: " + s1.getGender());
         System.out.println("Nickname: " + s1.getNickname());
-        
+                
     }
 }
