@@ -26,4 +26,6 @@ public class Subject {
         this.year = year;
 
     }
+
+    public String 
 }
