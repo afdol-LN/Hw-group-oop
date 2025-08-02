@@ -17,7 +17,13 @@ public class Subject {
         this.year = 2025;
     }
 
-    public Subject(String subname,int subID,int credit,int ){
+    public Subject(String subname,int subID,int credit,int section,int semester,int year){
+        this.subjectname=subname;
+        this.subjectID = subID;
+        this.credit = credit;
+        this.section = section;
+        this.semester = semester;
+        this.year = year;
 
     }
 }
