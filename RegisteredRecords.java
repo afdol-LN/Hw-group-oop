@@ -3,7 +3,7 @@ public class RegisteredRecords {
     private Student student;
     private String  studentID;
     private String subjectID;
-    private double score;
+    private double score = 0.123;
     private int credit;
     private double scorepersubj;
 
@@ -13,20 +13,33 @@ public class RegisteredRecords {
         this.subjectID = "unknow";
         
     }
-    public RegisteredRecords(Subject newsubject){
-        this.subject = newsubject;
-        this.subjectID = subject.getSubjectID();
-        this.credit = subject.getCredit();
-        System.out.println("subject is update");
-    }
-     public RegisteredRecords(Student newstudent){
-        this.student = newstudent;
-        this.studentID = student.getStudentID();
-        this.score = student.getScore();
-        calScore(this.score);
-        System.out.println("student is update");
-    }
+    // public RegisteredRecords(Subject newsubject){
+    //     this.subject = newsubject;
+    //     this.subjectID = subject.getSubjectID();
+    //     this.credit = subject.getCredit();
+    //     System.out.println("subject is update");
+    // }
+    //  public RegisteredRecords(Student newstudent){
+    //     this.student = newstudent;
+    //     this.studentID = student.getStudentID();
+    //     this.score = student.getScore();
+    //     System.out.println(score);
+    //     calScore(this.score);
+    //     System.out.println("student is update");
+    // }
+    public RegisteredRecords(Student student, Subject subject) {
+    this.student = student;
+    this.subject = subject;
+    this.studentID = student.getStudentID();
+    this.subjectID = subject.getSubjectID();
+    this.credit = subject.getCredit();
+    this.score = student.getScore(); 
+    // คะแนนจาก Student
+    calScore(this.score);             // แปลงคะแนนเป็นเกรด
+    
+}
     public void calScore(double score){
+        System.out.println("calScore");
         if (score>=80) {
             this.scorepersubj = 4.0;
         }
@@ -59,7 +72,7 @@ public class RegisteredRecords {
         return this.studentID;
     }
     public double getScore(){
-        return this.score;
+        return this.scorepersubj;
     }
     public int getCredit(){
         return this.credit;

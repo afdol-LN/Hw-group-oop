@@ -7,10 +7,10 @@ public class Student extends People{
     public String major;
     public double score;
     private double GPA;
-    private Student std;
+    
 
     private ArrayList<RegisteredRecords> registeredRecords;
-    RegisteredRecords newStdID = new RegisteredRecords(std);
+    // RegisteredRecords newStdID = new RegisteredRecords(std);
     // class variable
     static int numberOfStudent;
     //constructors
@@ -39,7 +39,6 @@ public class Student extends People{
     
 
     //setter/methods
-<<<<<<< HEAD
     @Override
     public void setFullname(String fullname){
         super.setFullname(fullname);
@@ -48,17 +47,10 @@ public class Student extends People{
     public String getFullname(){
         return super.getFullname();
     }
-=======
-    
->>>>>>> c90df5ab8793b85b3fe88dbffbe6a6dc014e5b25
     public void setStudentID(String studentID){
         this.studentID = studentID;
     }
 
-<<<<<<< HEAD
-
-    public void register(Subject s){
-=======
     public String getStudentID(){
         return this.studentID;
     }
@@ -90,18 +82,16 @@ public class Student extends People{
     }
 
 
-    public void register(Subject s , Student std){
-        RegisteredRecords newStdID = new RegisteredRecords(std);
->>>>>>> c90df5ab8793b85b3fe88dbffbe6a6dc014e5b25
-        RegisteredRecords newsubj = new RegisteredRecords(s);
-        this.registeredRecords.add(newsubj);
-        this.registeredRecords.add(newStdID);
-
+    public void register(Subject s ){
+        
+       RegisteredRecords record = new RegisteredRecords(this,s);
+        this.registeredRecords.add(record);
     }
 
     public void setScore(double score){
         this.score=score;
-        this.registeredRecords.add(newStdID);
+        // RegisteredRecords newStdID = new RegisteredRecords(this);
+        // this.registeredRecords.add(newStdID);
     }
     public double getScore(){
         return this.score;
@@ -111,10 +101,16 @@ public class Student extends People{
         double totalscore = 0;
         int totalcredit = 0;
         for (RegisteredRecords record : registeredRecords) {
-            totalscore += record.getScore();
+            totalscore += record.getCredit()*record.getScore();
             totalcredit += record.getCredit();
         }
-        this.GPA = totalscore/totalcredit;
+        if (totalscore!=0) {
+            this.GPA = totalscore/totalcredit;
+        }
+        else{
+            this.GPA = 0.0;
+        }
+        
     }
     public double getGPA(){
         return  this.GPA;
@@ -133,9 +129,9 @@ public class Student extends People{
     }
     
     public void showInfoGPA(){
-        for (RegisteredRecords record : registeredRecords) {
-            record.showReecordScore();
-        }
+        // for (RegisteredRecords record : registeredRecords) {
+        //     record.showReecordScore();
+        // }
         System.out.println("GPA:"+this.GPA);
     }
 }

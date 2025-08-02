@@ -2,7 +2,7 @@ public class Subject {
     private String subjectname;
     private String subjectID;
     private int credit;
-    private Lacturer lecturer;
+    private String lecturer;
     private int section;
     private int semester;
     private int year;
@@ -15,12 +15,18 @@ public class Subject {
         this.semester = 0;
         this.year = 2025;
     }
+     public Subject(String subjname,String subjID,int credit,Lacturer lecturer){
+        this.subjectname = subjname;
+        this.subjectID = subjID;
+        this.credit = credit;
+        this.lecturer = lecturer.getFullname();
+    }
 
     public Subject(String subname,String subID,int credit,Lacturer lecturer,int section,int semester,int year){
         this.subjectname = subname;
         this.subjectID = subID;
         this.credit = credit;
-        this.lecturer = lecturer;
+        this.lecturer = lecturer.getFullname();
         this.section = section;
         this.semester = semester;
         this.year = year;
@@ -48,9 +54,9 @@ public class Subject {
     }
 
     public void setLecturer(Lacturer lecturer){
-        this.lecturer = lecturer;
+        this.lecturer = lecturer.getFullname();
     }
-    public Lacturer getLecturer(){
+    public String getLecturer(){
         return this.lecturer;
     }
 

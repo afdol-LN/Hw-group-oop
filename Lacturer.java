@@ -21,6 +21,10 @@ public class Lacturer extends People{
     public String getLacturerID(){
         return this.LacturerID;
     }
+    @Override
+    public String getFullname(){
+        return super.getFullname();
+    }
 
     public void printInfo() {
         System.out.println("--- Lacturer Info ---");
