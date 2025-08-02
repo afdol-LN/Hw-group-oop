@@ -56,6 +56,12 @@ public class People{
     public void greeting(){
         System.out.println("Sawasdee");  
     }
+    public void setFullname(String fullname){
+        this.fullname = fullname;
+    }
+    public String getFullname(){
+        return this.fullname;
+    }
     // setter/getter methods
 	public void setGender(String gender){ //gender: informal parameter
         this.gender = gender;
@@ -91,6 +97,9 @@ public class People{
     // helper methods
     // public String gender; // "male", "female" 
     // public String nickname;
+    public void setYearBorn(int yearBorn){
+        this.yearBorn = yearBorn;
+    }
     public void setIdentificationID(String identifcationID){
         this.identifcationID = identifcationID;
     }
