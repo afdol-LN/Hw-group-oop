@@ -7,12 +7,6 @@ public class Lacturer extends People{
         System.out.println("Lacturer()");
     }
 
-    public Lacturer(String fullname, String LacturerID){
-        this.LacturerID = LacturerID;
-        super.setFullname(fullname);
-        
-    }
-
     public Lacturer(String fullname, String LacturerID ,int yearBorn ,String geder, int Age){
         super.setFullname(fullname);//(คำสั่ง super) เรียกใช้method ของตัวแม่
         super.setGender(gender);//ใช้method ของตัวแม่
@@ -35,7 +29,7 @@ public class Lacturer extends People{
         System.out.println("Gender: " + getGender());
         System.out.println("Year born: " + getYearBorn());
         System.out.println("Age: " + getAge());
-        System.out.println("Lacturer ID: " + LacturerID);
+        System.out.println("Lacturer ID: " + getLacturerID());
         System.out.println("----------------------");
     }
 }

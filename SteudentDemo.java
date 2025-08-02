@@ -5,9 +5,15 @@ public class SteudentDemo extends People{
     public static void main(String[] args){
 
         Student student = new Student();
-        
-        Lacturer lacturer = new Lacturer();
+        student.setFullname("aonglee");
+        student.setGender("Male");
+        student.setStudentID("1");
+        student.setFacuty("Science");
+        student.setMajor("ICT");
 
+        student.printInfo();
+
+        Lacturer lacturer = new Lacturer();
         lacturer.setFullname("afdol");
         lacturer.setGender("Male");
         lacturer.setYearBorn(2005);
@@ -15,6 +21,7 @@ public class SteudentDemo extends People{
         lacturer.setLacturerID("1");
 
         lacturer.printInfo();
+
         Subject subject = new Subject();
 
 

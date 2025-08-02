@@ -19,20 +19,49 @@ public class Student extends People{
         registeredRecords = new ArrayList<>();
     }
 
-    public Student(String gender, String nickname){
-      System.out.println("Student(String gender, String nickname)");  
-      this.gender = gender;
-      this.nickname = nickname;
+    public Student(String gender, String fullname){
+      System.out.println("Student(String gender, String fullname)");  
+      super.setFullname(fullname);
+      super.setGender(gender);
       numberOfStudent = numberOfStudent + 1;
     }
 
     //setter/methods
+    
     public void setStudentID(String studentID){
         this.studentID = studentID;
-    };
-    public String getStudentID(){
-        return studentID;
     }
+
+    public String getStudentID(){
+        return this.studentID;
+    }
+
+    public void setFacuty(String faculty){
+        this.faculty = faculty;
+    }
+    
+    public String getFaculty(){
+        return this.faculty;
+    }
+
+    public void setMajor(String major){
+        this.major = major;
+    }
+
+    public String getMajor(){
+        return this.major;
+    }
+
+    public void printInfo(){
+        System.out.println("--- Student Info ---");
+        System.out.println("Fullname: " + getFullname());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Faculty: " + getFaculty());
+        System.out.println("Major: " + getMajor());
+        System.out.println("Student ID: " + getStudentID());
+        System.out.println("----------------------");
+    }
+
 
     public void register(Subject s , Student std){
         RegisteredRecords newStdID = new RegisteredRecords(std);
