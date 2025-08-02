@@ -6,6 +6,7 @@ public class SteudentDemo extends People{
         Student student = new Student();
         
         Lacturer lacturer = new Lacturer();
+        lacturer.setLacturerID("1");
         lacturer.setFullname("afdol");
         
 

@@ -1,22 +1,22 @@
 public class Lacturer extends People{
 
 
-    private int LacturerID;
+    private String LacturerID;
 
     Lacturer(){
         System.out.println("Lacturer()");
     }
 
-    Lacturer(String fullname, int LacturerID){
+    Lacturer(String fullname, String LacturerID){
         this.fullname = fullname;
         this.LacturerID = LacturerID;
     }
 
-    public void setLacturerID(int LacturerID){
+    public void setLacturerID(String LacturerID){
         this.LacturerID = LacturerID;
     }
 
-    public int getLacturerID(){
+    public String getLacturerID(){
         return this.LacturerID;
     }
 
