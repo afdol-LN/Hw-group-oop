@@ -13,20 +13,7 @@ public class RegisteredRecords {
         this.subjectID = "unknow";
         
     }
-    // public RegisteredRecords(Subject newsubject){
-    //     this.subject = newsubject;
-    //     this.subjectID = subject.getSubjectID();
-    //     this.credit = subject.getCredit();
-    //     System.out.println("subject is update");
-    // }
-    //  public RegisteredRecords(Student newstudent){
-    //     this.student = newstudent;
-    //     this.studentID = student.getStudentID();
-    //     this.score = student.getScore();
-    //     System.out.println(score);
-    //     calScore(this.score);
-    //     System.out.println("student is update");
-    // }
+    
     public RegisteredRecords(Student student, Subject subject) {
     this.student = student;
     this.subject = subject;
@@ -34,12 +21,16 @@ public class RegisteredRecords {
     this.subjectID = subject.getSubjectID();
     this.credit = subject.getCredit();
     this.score = student.getScore(); 
-    // คะแนนจาก Student
-    calScore(this.score);             // แปลงคะแนนเป็นเกรด
+    this.scorepersubj = 0.0;
+    
     
 }
+    public void setScore(double score){
+        this.score = score;
+        calScore(this.score);
+    }
     public void calScore(double score){
-        System.out.println("calScore");
+        // System.out.println("calScore");
         if (score>=80) {
             this.scorepersubj = 4.0;
         }
@@ -82,8 +73,14 @@ public class RegisteredRecords {
 
 
     public void showReecordScore(){
-        System.out.println("ชื่อนักศึกษา:"+student.getFullname()+"รหัสวิชา:"+getSubjectID()+"ชื่อวิชา:"
-        +subject.getSubjectName()+"เครดิต:"+subject.getCredit()+"เกรด:"+scorepersubj);
+        // System.out.println("ชื่อนักศึกษา:"+student.getFullname()+" "+" รหัสวิชา:"+getSubjectID()+" ชื่อวิชา:"
+        // +subject.getSubjectName()+" เครดิต:"+subject.getCredit()+" เกรด:"+scorepersubj);
+        System.out.println("--- score Info ---");
+        System.out.println("ืstudentname: "+student.getFullname());
+        System.out.println("subjectID: "+getSubjectID());
+        System.out.println("subjectname "+subject.getSubjectName());
+        System.out.println("credit "+subject.getCredit());
+        System.out.println("grade "+scorepersubj);
     }
     //defualt contructer
     

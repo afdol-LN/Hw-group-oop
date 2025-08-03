@@ -8,8 +8,8 @@ public class Student extends People{
     public double score;
     private double GPA;
     
-
-    private ArrayList<RegisteredRecords> registeredRecords;
+    private ArrayList<RegisteredRecords> registeredRecords = new ArrayList<>();
+    // private ArrayList<RegisteredRecords> registeredRecords;
     // RegisteredRecords newStdID = new RegisteredRecords(std);
     // class variable
     static int numberOfStudent;
@@ -17,7 +17,7 @@ public class Student extends People{
     public Student(){
         System.out.println("Student()"); 
         numberOfStudent = numberOfStudent + 1;
-        registeredRecords = new ArrayList<>();
+        // registeredRecords = new ArrayList<>();
     }
     public Student(String fullanme,String studentID,String gender, String nickname){
       System.out.println("Student(String gender, String nickname)");  
@@ -28,13 +28,21 @@ public class Student extends People{
       
       numberOfStudent = numberOfStudent + 1;
     }
-
-    public Student(String gender, String fullname){
-      System.out.println("Student(String gender, String fullname)");  
+    public Student(String fullanme,String studentID){
+     
+      this.studentID = studentID;
       super.setFullname(fullname);
-      super.setGender(gender);
+      
       numberOfStudent = numberOfStudent + 1;
     }
+
+
+    // public Student(String gender, String fullname){
+    //   System.out.println("Student(String gender, String fullname)");  
+    //   super.setFullname(fullname);
+    //   super.setGender(gender);
+    //   numberOfStudent = numberOfStudent + 1;
+    // }
 
     
 
@@ -88,8 +96,14 @@ public class Student extends People{
         this.registeredRecords.add(record);
     }
 
-    public void setScore(double score){
-        this.score=score;
+    public void setScore(String subjID,double score){
+       
+        for (RegisteredRecords record : registeredRecords) {
+            if (record.getSubjectID().equals(subjID)) {
+                record.setScore(score);
+                break;
+            }
+        }
         // RegisteredRecords newStdID = new RegisteredRecords(this);
         // this.registeredRecords.add(newStdID);
     }
@@ -129,9 +143,11 @@ public class Student extends People{
     }
     
     public void showInfoGPA(){
-        // for (RegisteredRecords record : registeredRecords) {
-        //     record.showReecordScore();
-        // }
-        System.out.println("GPA:"+this.GPA);
+        for (RegisteredRecords record : registeredRecords) {
+            record.showReecordScore();
+        }
+        calGPA();
+        System.out.println("--------------------------");
+        System.out.println("GPA:"+String.format("%.2f",this.GPA));
     }
 }
