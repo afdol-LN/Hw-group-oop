@@ -12,10 +12,11 @@ public class SteudentDemo extends People{
         student1.setStudentID("1");
 
         Student afdol = new Student("Afdol leenud","6610210454");
+        afdol.setFullname("afdol");
 
 
         student1.printInfo();
-
+        afdol.printInfo();
         Lacturer lacturer1 = new Lacturer();
         lacturer1.setFullname("afdol");
         lacturer1.setGender("Male");
@@ -37,8 +38,8 @@ public class SteudentDemo extends People{
         student1.setScore(biology.getSubjectID(),71);
         student1.showInfoGPA();
         
-        // afdol.register(math);
-        // afdol.setScore(math.getSubjectID(), 56);
-        // afdol.showInfoGPA();
+        afdol.register(math);
+        afdol.setScore(math.getSubjectID(), 56);
+        afdol.showInfoGPA();
     }
 }

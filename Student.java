@@ -28,10 +28,14 @@ public class Student extends People{
       
       numberOfStudent = numberOfStudent + 1;
     }
-    public Student(String fullanme,String studentID){
+    public Student(String fullname,String studentID){
      
+        // System.out.println("overloading contructer ");
       this.studentID = studentID;
       super.setFullname(fullname);
+    //   System.out.println(super.getFullname());
+    //   System.out.println(this.studentID);
+
       
       numberOfStudent = numberOfStudent + 1;
     }
@@ -92,7 +96,13 @@ public class Student extends People{
 
     public void register(Subject s ){
         
-       RegisteredRecords record = new RegisteredRecords(this,s);
+        for (RegisteredRecords r : registeredRecords) {
+        if (r.getSubjectID().equals(s.getSubjectID())) {
+            System.out.println("Already registered: " + s.getSubjectName());
+            return;
+        }
+        }
+        RegisteredRecords record = new RegisteredRecords(this,s);
         this.registeredRecords.add(record);
     }
 
