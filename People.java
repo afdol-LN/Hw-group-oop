@@ -27,7 +27,7 @@ public class People{
 
     //default constructor
     public People(){
-      System.out.println("People()");  
+    //   System.out.println("People()");  
       numberOfPeople = numberOfPeople + 1;
     }
     // Overloading constructors
@@ -99,6 +99,9 @@ public class People{
     // public String nickname;
     public void setYearBorn(int yearBorn){
         this.yearBorn = yearBorn;
+    }
+    public int getYearBorn(){
+        return this.yearBorn;
     }
     public void setIdentificationID(String identifcationID){
         this.identifcationID = identifcationID;
