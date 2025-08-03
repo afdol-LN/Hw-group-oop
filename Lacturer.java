@@ -4,7 +4,7 @@ public class Lacturer extends People{
     private String LacturerID;
 
     public Lacturer(){
-        System.out.println("Lacturer()");
+        // System.out.println("Lacturer()");
     }
 
     public Lacturer(String fullname, String LacturerID ,int yearBorn ,String geder, int Age){
@@ -34,5 +34,6 @@ public class Lacturer extends People{
         System.out.println("Age: " + getAge());
         System.out.println("Lacturer ID: " + getLacturerID());
         System.out.println("----------------------");
+        System.out.println("");
     }
 }

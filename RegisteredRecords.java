@@ -75,12 +75,14 @@ public class RegisteredRecords {
     public void showReecordScore(){
         // System.out.println("ชื่อนักศึกษา:"+student.getFullname()+" "+" รหัสวิชา:"+getSubjectID()+" ชื่อวิชา:"
         // +subject.getSubjectName()+" เครดิต:"+subject.getCredit()+" เกรด:"+scorepersubj);
+        
         System.out.println("--- score Info ---");
         System.out.println("studentname: "+student.getFullname());
         System.out.println("subjectID: "+getSubjectID());
         System.out.println("subjectname "+subject.getSubjectName());
         System.out.println("credit "+subject.getCredit());
         System.out.println("grade "+scorepersubj);
+
     }
     //defualt contructer
     

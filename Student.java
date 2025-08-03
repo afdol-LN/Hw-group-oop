@@ -15,7 +15,7 @@ public class Student extends People{
     static int numberOfStudent;
     //constructors
     public Student(){
-        System.out.println("Student()"); 
+        // System.out.println("Student()"); 
         numberOfStudent = numberOfStudent + 1;
         // registeredRecords = new ArrayList<>();
     }
@@ -33,6 +33,17 @@ public class Student extends People{
         // System.out.println("overloading contructer ");
       this.studentID = studentID;
       super.setFullname(fullname);
+    //   System.out.println(super.getFullname());
+    //   System.out.println(this.studentID);
+
+      
+      numberOfStudent = numberOfStudent + 1;
+    }
+
+    public Student(String studentID){
+     
+        // System.out.println("overloading contructer ");
+      this.studentID = studentID;
     //   System.out.println(super.getFullname());
     //   System.out.println(this.studentID);
 
@@ -84,6 +95,7 @@ public class Student extends People{
     }
 
     public void printInfo(){
+        
         System.out.println("--- Student Info ---");
         System.out.println("Fullname: " + getFullname());
         System.out.println("Gender: " + getGender());
@@ -91,6 +103,7 @@ public class Student extends People{
         System.out.println("Major: " + getMajor());
         System.out.println("Student ID: " + getStudentID());
         System.out.println("----------------------");
+        System.out.println("");
     }
 
 
@@ -157,7 +170,11 @@ public class Student extends People{
             record.showReecordScore();
         }
         calGPA();
-        System.out.println("--------------------------");
+        System.out.println("");
+        System.out.println("--- GPA Info ---");
         System.out.println("GPA:"+String.format("%.2f",this.GPA));
+        System.out.println("------------------");
+        System.out.println("");
+    
     }
 }
