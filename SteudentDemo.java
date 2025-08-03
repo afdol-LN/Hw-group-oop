@@ -3,7 +3,7 @@ public class SteudentDemo extends People{
     //hello
     //hello
     public static void main(String[] args){
-
+        
         Student student1 = new Student();
         
         student1.setFullname("mongckontham duaykhunthod");
