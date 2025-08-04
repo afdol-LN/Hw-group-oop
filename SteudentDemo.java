@@ -20,7 +20,7 @@ public class SteudentDemo extends People{
 
         Lacturer lacturer1 = new Lacturer();
 
-        lacturer1.setFullname("afdol");
+        lacturer1.setFullname("Sarayut");
         lacturer1.setGender("Male");
         lacturer1.setYearBorn(2005);
         lacturer1.calAge();
