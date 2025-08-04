@@ -27,10 +27,14 @@ public class SteudentDemo extends People{
         lacturer1.setLacturerID("1");
 
         lacturer1.printInfo();
+        
+        Lacturer lacturer2 = new Lacturer("ait");
 
         Subject math = new Subject("math","308-99",3,lacturer1);
         Subject biology = new Subject("biology","308-001",2,lacturer1);
         Subject OOP = new Subject("OOP","308-331",4,lacturer1);
+        
+        OOP.showinfo();
 
         student1.register(math);
         student1.register(biology);

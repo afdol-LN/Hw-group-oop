@@ -7,6 +7,10 @@ public class Lacturer extends People{
         // System.out.println("Lacturer()");
     }
 
+    public Lacturer(String fullname){
+        super.setFullname(fullname);
+    }
+
     public Lacturer(String fullname, String LacturerID ,int yearBorn ,String geder, int Age){
         super.setFullname(fullname);//(คำสั่ง super) เรียกใช้method ของตัวแม่
         super.setGender(gender);//ใช้method ของตัวแม่
