@@ -3,32 +3,38 @@ public class SteudentDemo extends People{
     //hello
     //hello
     public static void main(String[] args){
-
+        
         Student student1 = new Student();
-        student1.setFullname("aonglee");
+        
+        student1.setFullname("mongckontham duaykhunthod");
         student1.setGender("Male");
         student1.setFacuty("Science");
         student1.setMajor("ICT");
-        student1.setStudentID("1");
+        student1.setStudentID("6610210313");
 
-        Student afdol = new Student("Afdol leenud","6610210454");
-        afdol.setFullname("afdol");
-
+        Student afdol = new Student("afdol leenud","6610210454");
+        
 
         student1.printInfo();
         afdol.printInfo();
+
         Lacturer lacturer1 = new Lacturer();
-        lacturer1.setFullname("afdol");
+
+        lacturer1.setFullname("Sarayut");
         lacturer1.setGender("Male");
         lacturer1.setYearBorn(2005);
         lacturer1.calAge();
         lacturer1.setLacturerID("1");
 
         lacturer1.printInfo();
+        
+        Lacturer lacturer2 = new Lacturer("ait");
 
         Subject math = new Subject("math","308-99",3,lacturer1);
         Subject biology = new Subject("biology","308-001",2,lacturer1);
         Subject OOP = new Subject("OOP","308-331",4,lacturer1);
+        
+        OOP.showinfo();
 
         student1.register(math);
         student1.register(biology);

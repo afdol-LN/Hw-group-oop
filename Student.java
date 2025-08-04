@@ -17,8 +17,13 @@ public class Student extends People {
     static int numberOfStudent;
 
     //constructors
+<<<<<<< HEAD
     public Student() {
         System.out.println("Student()");
+=======
+    public Student(){
+        // System.out.println("Student()"); 
+>>>>>>> c77ec57032b23238b7d9494048176528a6275c97
         numberOfStudent = numberOfStudent + 1;
         // registeredRecords = new ArrayList<>();
     }
@@ -44,6 +49,21 @@ public class Student extends People {
         numberOfStudent = numberOfStudent + 1;
     }
 
+<<<<<<< HEAD
+=======
+    public Student(String studentID){
+     
+        // System.out.println("overloading contructer ");
+      this.studentID = studentID;
+    //   System.out.println(super.getFullname());
+    //   System.out.println(this.studentID);
+
+      
+      numberOfStudent = numberOfStudent + 1;
+    }
+
+
+>>>>>>> c77ec57032b23238b7d9494048176528a6275c97
     // public Student(String gender, String fullname){
     //   System.out.println("Student(String gender, String fullname)");  
     //   super.setFullname(fullname);
@@ -85,7 +105,12 @@ public class Student extends People {
         return this.major;
     }
 
+<<<<<<< HEAD
     public void printInfo() {
+=======
+    public void printInfo(){
+        
+>>>>>>> c77ec57032b23238b7d9494048176528a6275c97
         System.out.println("--- Student Info ---");
         System.out.println("Fullname: " + getFullname());
         System.out.println("Gender: " + getGender());
@@ -93,6 +118,7 @@ public class Student extends People {
         System.out.println("Major: " + getMajor());
         System.out.println("Student ID: " + getStudentID());
         System.out.println("----------------------");
+        System.out.println("");
     }
 
     public void register(Subject s) {
@@ -165,6 +191,16 @@ public class Student extends People {
             System.out.println("--------------------------");
             System.out.println("GPA:" + String.format("%.2f", this.GPA));
         }
+<<<<<<< HEAD
         
+=======
+        calGPA();
+        System.out.println("");
+        System.out.println("--- GPA Info ---");
+        System.out.println("GPA:"+String.format("%.2f",this.GPA));
+        System.out.println("------------------");
+        System.out.println("");
+    
+>>>>>>> c77ec57032b23238b7d9494048176528a6275c97
     }
 }

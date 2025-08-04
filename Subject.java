@@ -1,4 +1,4 @@
-public class Subject {
+public class Subject{
     private String subjectname;
     private String subjectID;
     private int credit;
@@ -53,12 +53,14 @@ public class Subject {
         return this.credit;
     }
 
-    public void setLecturer(Lacturer lecturer){
-        this.lecturer = lecturer.getFullname();
+    public void setLecturer(String lecturer){
+        this.lecturer = lecturer;
     }
+    
     public String getLecturer(){
         return this.lecturer;
     }
+
 
     public void setSection(int section){
         this.section = section;
@@ -81,4 +83,19 @@ public class Subject {
         return this.year;
     }
 
+    public void showinfo(){
+        
+        System.out.println("--- Subject Info ---");
+        System.out.println("lac: "+getLecturer());
+        System.out.println("Subject: "+getSubjectID());
+        System.out.println("Subjectname: "+getSubjectName());
+        System.out.println("Credit: "+getCredit());
+        System.out.println("Section: "+getSection());
+        System.out.println("Semester: "+getSemester());
+        System.out.println("Year: "+getYear());
+        System.out.println("----------------------");
+        System.out.println("");
+    
+
+    }
 }

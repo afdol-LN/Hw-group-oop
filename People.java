@@ -27,7 +27,7 @@ public class People{
 
     //default constructor
     public People(){
-      System.out.println("People()");  
+    //   System.out.println("People()");  
       numberOfPeople = numberOfPeople + 1;
     }
     // Overloading constructors
