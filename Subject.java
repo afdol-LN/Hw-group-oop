@@ -84,9 +84,18 @@ public class Subject{
     }
 
     public void showinfo(){
-
+        
+        System.out.println("--- Subject Info ---");
         System.out.println("lac: "+getLecturer());
         System.out.println("Subject: "+getSubjectID());
         System.out.println("Subjectname: "+getSubjectName());
+        System.out.println("Credit: "+getCredit());
+        System.out.println("Section: "+getSection());
+        System.out.println("Semester: "+getSemester());
+        System.out.println("Year: "+getYear());
+        System.out.println("----------------------");
+        System.out.println("");
+    
+
     }
 }
