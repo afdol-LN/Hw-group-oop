@@ -4,10 +4,10 @@ public class People{
     //accessibility/visibility, data type or class, attribute nams
     
     // instance variable
-    public String gender; // "male", "female" 
-    public String nickname;
+    private String gender; // "male", "female" 
+    private String nickname;
     protected String identifcationID;
-    public String fullname;
+    private String fullname;
     
     //private int yearBorn;
     protected int yearBorn;
