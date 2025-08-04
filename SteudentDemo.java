@@ -28,10 +28,22 @@ public class SteudentDemo extends People{
 
         lacturer1.printInfo();
 
+        Lacturer lacturer2 = new Lacturer();
+
+        lacturer2.setFullname("aonglee");
+        lacturer2.setGender("Male");
+        lacturer2.setYearBorn(2005);
+        lacturer2.calAge();
+        lacturer2.setLacturerID("2");
+
+        lacturer2.printInfo();
+
         Subject math = new Subject("math","308-99",3,lacturer1);
         Subject biology = new Subject("biology","308-001",2,lacturer1);
+
         Subject OOP = new Subject("OOP","308-331",4,lacturer1);
 
+        
         student1.register(math);
         student1.register(biology);
         student1.register(OOP);
@@ -44,4 +56,5 @@ public class SteudentDemo extends People{
         afdol.setScore(math.getSubjectID(), 56);
         afdol.showInfoGPA();
     }
+    
 }

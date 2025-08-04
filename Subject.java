@@ -7,6 +7,8 @@ public class Subject {
     private int semester;
     private int year;
 
+    
+
     public Subject(){
         this.subjectname="unknow";
         this.subjectID = "000000";
@@ -14,12 +16,14 @@ public class Subject {
         this.section = 1;
         this.semester = 0;
         this.year = 2025;
+
     }
      public Subject(String subjname,String subjID,int credit,Lacturer lecturer){
         this.subjectname = subjname;
         this.subjectID = subjID;
         this.credit = credit;
         this.lecturer = lecturer.getFullname();
+       
     }
 
     public Subject(String subname,String subID,int credit,Lacturer lecturer,int section,int semester,int year){
@@ -30,6 +34,7 @@ public class Subject {
         this.section = section;
         this.semester = semester;
         this.year = year;
+        
     }
 
     public void setSubjectName(String subname){
@@ -55,6 +60,7 @@ public class Subject {
 
     public void setLecturer(Lacturer lecturer){
         this.lecturer = lecturer.getFullname();
+        
     }
     public String getLecturer(){
         return this.lecturer;

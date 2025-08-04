@@ -21,6 +21,9 @@ public class Lacturer extends People{
     public String getLacturerID(){
         return this.LacturerID;
     }
+    public void setFullname(){
+        super.
+    }
     @Override
     public String getFullname(){
         return super.getFullname();

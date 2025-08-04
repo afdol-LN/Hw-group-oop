@@ -2,12 +2,12 @@
 public class People{
 	//attributes: General and which for BMI calculation
     //accessibility/visibility, data type or class, attribute nams
-    
+    private String fullname;
     // instance variable
     private String gender; // "male", "female" 
     private String nickname;
     protected String identifcationID;
-    private String fullname;
+    
     
     //private int yearBorn;
     protected int yearBorn;
@@ -28,6 +28,10 @@ public class People{
     //default constructor
     public People(){
     //   System.out.println("People()");  
+        this.fullname="unknow";
+        this.gender = "unknow";
+        this.nickname = "unknow";
+        this.identifcationID = "unknow";
       numberOfPeople = numberOfPeople + 1;
     }
     // Overloading constructors
@@ -45,6 +49,7 @@ public class People{
       this.nickname = nickname;
       numberOfPeople = numberOfPeople + 1;
     }
+    
     public People(int yearBorn, String gender, String nickname){
       System.out.println("Overloading constructor of People()");  
       this.yearBorn = yearBorn;

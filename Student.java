@@ -17,9 +17,12 @@ public class Student extends People{
     public Student(){
         // System.out.println("Student()"); 
         numberOfStudent = numberOfStudent + 1;
+         this.studentID = "unknow";
+         this.faculty = "unknow";
+         this.major = "";
         // registeredRecords = new ArrayList<>();
     }
-    public Student(String fullanme,String studentID,String gender, String nickname){
+    public Student(String fullname,String studentID,String gender, String nickname){
       System.out.println("Student(String gender, String nickname)");  
       this.studentID = studentID;
       super.setFullname(fullname);
