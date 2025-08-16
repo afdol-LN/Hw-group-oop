@@ -18,9 +18,7 @@ public class People{
     private double height;   
     
 
-    // protected double weight;
-    // protected double height;   
-    // protected double BMI;
+    protected double BMI;
 
     // class variable
     public static int numberOfPeople;
@@ -76,24 +74,24 @@ public class People{
     public String getNickname(){
         return this.nickname;
     }
-    // public double getWeight(){
-    //     return weight;
-    // }
-    // public double getHeight(){
-    //     return height;
-    // }
-    // // Overloading methods
-    // public void calBMI(){
-    //     this.BMI = this.weight / ( (this.height/100.0) * (this.height/100.0) );
-    // }
-    // public double calBMI(People people){
-    //     double tempBMI = people.getWeight() / ( (people.getHeight()/100.0) * (people.getHeight()/100.0) );
-    //     return tempBMI;
-    // }
+    public double getWeight(){
+        return weight;
+    }
+    public double getHeight(){
+        return height;
+    }
+    // Overloading methods
+    public void calBMI(){
+        this.BMI = this.weight / ( (this.height/100.0) * (this.height/100.0) );
+    }
+    public double calBMI(People people){
+        double tempBMI = people.getWeight() / ( (people.getHeight()/100.0) * (people.getHeight()/100.0) );
+        return tempBMI;
+    }
 
-    // public double getBMI(){
-    //     return this.BMI;
-    // }
+    public double getBMI(){
+        return this.BMI;
+    }
     // helper methods
     // public String gender; // "male", "female" 
     // public String nickname;
@@ -113,6 +111,9 @@ public class People{
     public int getAge(){
         return age;
     }
+    // public String catagoryBMI(){
+        
+    // }
 
     // public void setHeight(double height){
     //     this.height = height;

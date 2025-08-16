@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 
 public class Student extends People {
 
@@ -8,22 +7,18 @@ public class Student extends People {
     public String faculty;
     public String major;
     public double score;
-    private double GPA;
+    private double GPX;
 
-    private ArrayList<RegisteredRecords> registeredRecords = new ArrayList<>();
+    // private ArrayList<RegisteredRecords> registeredRecords = new ArrayList<>();
     // private ArrayList<RegisteredRecords> registeredRecords;
     // RegisteredRecords newStdID = new RegisteredRecords(std);
     // class variable
     static int numberOfStudent;
+    Year year1 = new Year(this);
 
     //constructors
-<<<<<<< HEAD
-    public Student() {
-        System.out.println("Student()");
-=======
     public Student(){
         // System.out.println("Student()"); 
->>>>>>> c77ec57032b23238b7d9494048176528a6275c97
         numberOfStudent = numberOfStudent + 1;
         // registeredRecords = new ArrayList<>();
     }
@@ -49,8 +44,6 @@ public class Student extends People {
         numberOfStudent = numberOfStudent + 1;
     }
 
-<<<<<<< HEAD
-=======
     public Student(String studentID){
      
         // System.out.println("overloading contructer ");
@@ -63,7 +56,6 @@ public class Student extends People {
     }
 
 
->>>>>>> c77ec57032b23238b7d9494048176528a6275c97
     // public Student(String gender, String fullname){
     //   System.out.println("Student(String gender, String fullname)");  
     //   super.setFullname(fullname);
@@ -104,13 +96,9 @@ public class Student extends People {
     public String getMajor() {
         return this.major;
     }
-
-<<<<<<< HEAD
-    public void printInfo() {
-=======
+     @Override
     public void printInfo(){
         
->>>>>>> c77ec57032b23238b7d9494048176528a6275c97
         System.out.println("--- Student Info ---");
         System.out.println("Fullname: " + getFullname());
         System.out.println("Gender: " + getGender());
@@ -121,86 +109,109 @@ public class Student extends People {
         System.out.println("");
     }
 
+    // public void register(Subject s) {
+
+    //     for (RegisteredRecords r : registeredRecords) {
+    //         if (r.getSubjectID().equals(s.getSubjectID())) {
+    //             System.out.println("Already registered: " + s.getSubjectName());
+    //             return;
+    //         }
+    //     }
+    //     RegisteredRecords record = new RegisteredRecords(this, s);
+    //     this.registeredRecords.add(record);
+    // }
+
     public void register(Subject s) {
-
-        for (RegisteredRecords r : registeredRecords) {
-            if (r.getSubjectID().equals(s.getSubjectID())) {
-                System.out.println("Already registered: " + s.getSubjectName());
-                return;
-            }
-        }
-        RegisteredRecords record = new RegisteredRecords(this, s);
-        this.registeredRecords.add(record);
-    }
-
-    public void setScore(String subjID, double score) {
-
-        for (RegisteredRecords record : registeredRecords) {
-            if (record.getSubjectID().equals(subjID)) {
-                record.setScore(score);
-                break;
-            }
-        }
-        // RegisteredRecords newStdID = new RegisteredRecords(this);
-        // this.registeredRecords.add(newStdID);
-    }
-
-    public double getScore() {
-        return this.score;
-    }
-
-    public void calGPA() {
-        double totalscore = 0;
-        int totalcredit = 0;
-        for (RegisteredRecords record : registeredRecords) {
-            totalscore += record.getCredit() * record.getScore();
-            totalcredit += record.getCredit();
-        }
-        if (totalscore != 0) {
-            this.GPA = totalscore / totalcredit;
-        } else {
-            this.GPA = 0.0;
-        }
-
-    }
-
-    public double getGPA() {
-        return this.GPA;
-    }
-
-    public void printRegisteredRecords() {
-        System.out.println("--- Registered Records ---");
-        if (registeredRecords.isEmpty()) {
-            System.out.println("No records registered.");
-        } else {
-            for (RegisteredRecords record : registeredRecords) {
-                System.out.println(record); // This will call the toString() method of RegisteredRecords
-            }
-        }
-        System.out.println("--------------------------");
-    }
-
-    public void showInfoGPA() {
-        if (registeredRecords.isEmpty()) {
-            System.out.println("No records registered.");
-        } else {
-            for (RegisteredRecords record : registeredRecords) {
-                record.showReecordScore();
-            }
-            calGPA();
-            System.out.println("--------------------------");
-            System.out.println("GPA:" + String.format("%.2f", this.GPA));
-        }
-<<<<<<< HEAD
+        year1.register(s);
         
-=======
-        calGPA();
-        System.out.println("");
-        System.out.println("--- GPA Info ---");
-        System.out.println("GPA:"+String.format("%.2f",this.GPA));
-        System.out.println("------------------");
-        System.out.println("");
+    }
+    public void register(int semester,Subject s) {
+        year1.register(semester, s);
+    }
+
+    public void setScore(Subject subject, double score){
+        year1.setScore(subject, score);
+    }
+    public void setScore(Subject subject ,double score , int semester){
+        year1.setScore(subject, score ,semester);
+    }
+
+    // public void setScore(String subjID, double score) {
+
+    //     for (RegisteredRecords record : registeredRecords) {
+    //         if (record.getSubjectID().equals(subjID)) {
+    //             record.setScore(score);
+    //             break;
+    //         }
+    //     }
+    //     // RegisteredRecords newStdID = new RegisteredRecords(this);
+    //     // this.registeredRecords.add(newStdID);
+    // }
+
+    // public double getScore() {
+    //     return this.score;
+    // }
+
+    // public void calGPA() {
+    //     double totalscore = 0;
+    //     int totalcredit = 0;
+    //     for (RegisteredRecords record : registeredRecords) {
+    //         totalscore += record.getCredit() * record.getScore();
+    //         totalcredit += record.getCredit();
+    //     }
+    //     if (totalscore != 0) {
+    //         this.GPA = totalscore / totalcredit;
+    //     } else {
+    //         this.GPA = 0.0;
+    //     }
+
+    // }
+
+    // public double getGPA() {
+    //     return this.GPA;
+    // }
+
+    // public void printRegisteredRecords() {
+    //     System.out.println("--- Registered Records ---");
+    //     if (registeredRecords.isEmpty()) {
+    //         System.out.println("No records registered.");
+    //     } else {
+    //         for (RegisteredRecords record : registeredRecords) {
+    //             System.out.println(record); // This will call the toString() method of RegisteredRecords
+    //         }
+    //     }
+    //     System.out.println("--------------------------");
+    // }
+
+    // public void showInfoGPA() {
+    //     if (registeredRecords.isEmpty()) {
+    //         System.out.println("No records registered.");
+    //     } else {
+    //         for (RegisteredRecords record : registeredRecords) {
+    //             record.showReecordScore();
+    //         }
+    //         calGPA();
+    //         System.out.println("--------------------------");
+    //         System.out.println("GPA:" + String.format("%.2f", this.GPA));
+    //     }
+    //     calGPA();
+    //     System.out.println("");
+    //     System.out.println("--- GPA Info ---");
+    //     System.out.println("GPA:"+String.format("%.2f",this.GPA));
+    //     System.out.println("------------------");
+    //     System.out.println("");
     
->>>>>>> c77ec57032b23238b7d9494048176528a6275c97
+    // }
+    public double calGPX(){
+        GPX = ((year1.getGPA(1)*year1.getSumOfCredit(1))+(year1.getGPA(2)*year1.getSumOfCredit(2)))/
+        (year1.getSumOfCredit(1)+year1.getSumOfCredit(2));
+        return GPX;
+        
+    }
+    public void showGPAperTerm(int semester){
+        year1.showGPAperTerm(semester);
+    } 
+    public void withDraw(Subject subject){
+        year1.withDraw(subject);
     }
 }
